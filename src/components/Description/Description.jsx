@@ -1,7 +1,7 @@
 // import style from './FriendList.module.css';
 
 
-const Descriptions = () => {
+const Description = () => {
     return (
         <div>
             <h1>Sip Happens Café</h1>
@@ -10,4 +10,4 @@ const Descriptions = () => {
     );
 };
 
-export default Descriptions;
+export default Description;

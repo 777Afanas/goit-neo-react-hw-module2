@@ -2,12 +2,13 @@
 
 
 
-const Options = () => {    
+const Options = ({no, onResetR, onGood, onNeutral, onBad}) => {    
     return (
         <div>
-            <button>Good</button>
-            <button>Neutral</button>
-            <button>Bad</button>
+            <button onClick={onGood}>Good</button>
+            <button onClick={onNeutral}>Neutral</button>
+            <button onClick={onBad}>Bad</button>
+            {!no && <button onClick={onResetR}>Reset</button>}
         </div>
     );
 };
