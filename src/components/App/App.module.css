@@ -1,19 +1,8 @@
 .app {
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 40px;
-    gap: 40px;
-    font-size: 40;
-    color: #010101;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 25px;
-    margin-bottom: 40px;
-}
-

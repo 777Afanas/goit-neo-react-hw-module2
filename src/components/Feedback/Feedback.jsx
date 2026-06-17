@@ -1,13 +1,13 @@
-// import style from "./Profile.module.css";
+import style from "./Feedback.module.css";
 
 const Feedback = ({ goodValues, neutralValues, badValues, totalValues, positiveVal }) => {
   return (
-    <div>
-      <p>Good: {goodValues}</p>
-      <p>Neutral: {neutralValues}</p>
-      <p>Bad: {badValues}</p>
-      <p>Total: {totalValues}</p>
-      <p>Positive: {positiveVal}%</p>
+    <div className={style.container}>
+      <p className={style.text}>Good: {goodValues}</p>
+      <p className={style.text}>Neutral: {neutralValues}</p>
+      <p className={style.text}>Bad: {badValues}</p>
+      <p className={style.text}>Total: {totalValues}</p>
+      <p className={style.text}>Positive: {positiveVal}%</p>
     </div>
   );
 };

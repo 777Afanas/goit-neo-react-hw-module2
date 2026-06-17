@@ -3,9 +3,7 @@ import Description from "../Description/Description";
 import Options from "../Options/Options";
 import Feedback from "../Feedback/Feedback";
 import Notification from "../Notification/Notification";
-
-// import transactions from '../../data/transactions.json';
-// import '../../../node_modules/modern-normalize/modern-normalize.css';
+import style from "./App.module.css";
 
 const App = () => {
   const [values, setValues] = useState(() => {
@@ -46,7 +44,7 @@ const App = () => {
   );
 
   return (
-    <div>
+    <div className={style.app}>
       <Description />
       <Options
         no={noFeedback}
