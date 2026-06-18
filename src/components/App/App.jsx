@@ -39,27 +39,29 @@ const App = () => {
 
   const totalFeedback = values.good + values.neutral + values.bad;
   const noFeedback = totalFeedback === 0;
-  const totalPositive = Math.round(
-    ((values.good + values.neutral) / totalFeedback) * 100,
-  );
+  const totalPositive = totalFeedback
+    ? Math.round((values.good / totalFeedback) * 100)
+    : 0;
 
   return (
     <div className={style.app}>
       <Description />
       <Options
-        no={noFeedback}
+        isEmpty={noFeedback}
         onResetR={onReset}
         onGood={() => updateFeedback("good")}
         onNeutral={() => updateFeedback("neutral")}
         onBad={() => updateFeedback("bad")}
       />
-      {!noFeedback && (<Feedback
-        goodValues={values.good}
-        neutralValues={values.neutral}
-        badValues={values.bad}
-        totalValues={totalFeedback}
-        positiveVal={totalPositive}
-      />) }       
+      {!noFeedback && (
+        <Feedback
+          goodValues={values.good}
+          neutralValues={values.neutral}
+          badValues={values.bad}
+          totalValues={totalFeedback}
+          positiveVal={totalPositive}
+        />
+      )}
       {noFeedback && <Notification />}
     </div>
   );
